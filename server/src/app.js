@@ -11,8 +11,8 @@ app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(cors())
 
-app.get('/status', (req, res) => {
-    res.send({ message: 'Hello World '})
+app.post('/signup', (req, res) => {
+    res.send({ message: `Welcome ${req.body.firstName}, have fun!`})
 })
 
 app.listen(process.env.PORT || 3000)
